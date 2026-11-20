@@ -1,0 +1,13 @@
+[
+  {
+    "origin": [
+      "http://localhost:5173",
+      "http://127.0.0.1:5173",
+      "https://workflow-fb34a.web.app",
+      "https://workflow-fb34a.firebaseapp.com"
+    ],
+    "method": ["GET", "HEAD", "POST", "PUT"],
+    "responseHeader": ["Content-Type", "Authorization", "x-goog-resumable"],
+    "maxAgeSeconds": 3600
+  }
+]

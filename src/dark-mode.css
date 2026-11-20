@@ -1,0 +1,139 @@
+.app-shell.dark-mode {
+  color-scheme: dark;
+  color: #e6edf8;
+  background: #080d16;
+}
+
+.dark-mode .sidebar,
+.dark-mode .topbar,
+.dark-mode .panel,
+.dark-mode .stat-card,
+.dark-mode .workspace-switch,
+.dark-mode .help-card,
+.dark-mode .global-search,
+.dark-mode .button-outline,
+.dark-mode .nav-count,
+.dark-mode .global-search kbd,
+.dark-mode .table-search,
+.dark-mode .comment-form,
+.dark-mode .file-preview,
+.dark-mode .modal-card {
+  background-color: #111a29;
+  border-color: #293a55;
+}
+
+.dark-mode .topbar {
+  background-color: rgba(17, 26, 41, .96);
+}
+
+.dark-mode .brand,
+.dark-mode .page-heading h1,
+.dark-mode .detail-heading h1,
+.dark-mode .stat-value,
+.dark-mode .panel-heading h2,
+.dark-mode .profile-name,
+.dark-mode .workspace-label,
+.dark-mode .help-card strong,
+.dark-mode .file-meta strong,
+.dark-mode .detail-field strong,
+.dark-mode .milestone strong,
+.dark-mode .reminder-title,
+.dark-mode .jobs-table td,
+.dark-mode .equipment-placeholder,
+.dark-mode .discussion-comment strong,
+.dark-mode .comment-preview strong {
+  color: #e6edf8;
+}
+
+.dark-mode .page-content,
+.dark-mode .main-area,
+.dark-mode .nav-item,
+.dark-mode .breadcrumbs strong,
+.dark-mode .global-search,
+.dark-mode .global-search input,
+.dark-mode .button-outline,
+.dark-mode .file-row,
+.dark-mode .detail-field,
+.dark-mode .milestone,
+.dark-mode .comment-form input,
+.dark-mode .table-search,
+.dark-mode .select-control,
+.dark-mode .filter-select {
+  color: #c4d2e8;
+}
+
+.dark-mode .sidebar,
+.dark-mode .topbar,
+.dark-mode .workspace-switch,
+.dark-mode .help-card,
+.dark-mode .profile,
+.dark-mode .global-search,
+.dark-mode .jobs-table th,
+.dark-mode .jobs-table td,
+.dark-mode .file-row,
+.dark-mode .detail-field,
+.dark-mode .milestone,
+.dark-mode .comment-form,
+.dark-mode .discussion-comment,
+.dark-mode .reminder-item,
+.dark-mode .equipment-row,
+.dark-mode .table-search {
+  border-color: #293a55;
+}
+
+.dark-mode .nav-item:hover,
+.dark-mode .button-outline:hover,
+.dark-mode .jobs-table tr:hover,
+.dark-mode .file-row:hover,
+.dark-mode .reminder-item:hover {
+  background-color: #1b2a41;
+}
+
+.dark-mode .nav-item.active {
+  color: #a7c8ff;
+  background: #1b2d49;
+}
+
+.dark-mode .global-search input::placeholder,
+.dark-mode .panel-heading p,
+.dark-mode .page-heading p,
+.dark-mode .workspace-label span,
+.dark-mode .profile-name span,
+.dark-mode .help-card div > span,
+.dark-mode .file-meta small,
+.dark-mode .detail-field > span,
+.dark-mode .milestone small,
+.dark-mode .jobs-table th,
+.dark-mode .breadcrumbs,
+.dark-mode .eyebrow {
+  color: #91a3bd;
+}
+
+.dark-mode .global-search kbd,
+.dark-mode .nav-count {
+  color: #aebdd2;
+}
+
+.dark-mode .global-search input,
+.dark-mode .comment-form input,
+.dark-mode .table-search input,
+.dark-mode input,
+.dark-mode textarea,
+.dark-mode select {
+  background-color: #111a29;
+  color: #e6edf8;
+}
+
+.dark-mode .button-primary {
+  background-color: #416eae;
+  color: #fff;
+}
+
+.dark-mode .button-primary:hover {
+  background-color: #527fbe;
+}
+
+.dark-mode .file-preview-header,
+.dark-mode .modal-header {
+  border-color: #293a55;
+}

@@ -1,0 +1,74 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isMember() {
+      return request.auth != null
+        && request.auth.token.workspaceMember == true;
+    }
+
+    function isAdmin() {
+      return isMember()
+        && request.auth.token.workspaceAdmin == true;
+    }
+
+    match /jobs/{jobId} {
+      allow read, create, update, delete: if isMember();
+
+      match /attachments/{attachmentId} {
+        allow read, create, update, delete: if isMember();
+      }
+
+      match /comments/{commentId} {
+        allow read, create, update, delete: if isMember();
+      }
+
+      match /equipment/{equipmentId} {
+        allow read, create, update, delete: if isMember();
+      }
+
+      match /equipmentCounters/{counterId} {
+        allow read, create, update: if isMember();
+        allow delete: if false;
+      }
+    }
+
+    match /equipmentCatalog/{itemId} {
+      allow read, create, update: if isMember();
+      allow delete: if false;
+    }
+
+    match /suppliers/{supplierId} {
+      allow read, create, update, delete: if isMember();
+    }
+
+    match /accessRequests/{userId} {
+      allow create: if request.auth != null
+        && request.auth.uid == userId
+        && request.resource.data.keys().hasOnly(['uid', 'email', 'displayName', 'status', 'createdAt'])
+        && request.resource.data.uid == userId
+        && request.resource.data.email == request.auth.token.email
+        && request.resource.data.displayName is string
+        && request.resource.data.status == 'pending'
+        && request.resource.data.createdAt == request.time;
+      allow read: if isAdmin()
+        || (request.auth != null && request.auth.uid == userId);
+      allow update, delete: if false;
+    }
+
+    match /meta/jobCounter {
+      allow read: if isMember();
+      allow create: if isMember()
+        && request.resource.data.keys().hasOnly(['next'])
+        && request.resource.data.next == 250;
+      allow update: if isMember()
+        && request.resource.data.keys().hasOnly(['next'])
+        && request.resource.data.next == resource.data.next + 1;
+      allow delete: if false;
+    }
+
+    match /meta/supplierDirectorySeed {
+      allow read, create, update: if isMember();
+      allow delete: if false;
+    }
+  }
+}

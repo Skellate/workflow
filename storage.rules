@@ -1,0 +1,18 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    function isMember() {
+      return request.auth != null
+        && request.auth.token.workspaceMember == true;
+    }
+
+    match /jobs/{jobId}/{fileName} {
+      allow read: if isMember();
+      allow write: if isMember()
+        && request.resource.size < 100 * 1024 * 1024
+        && request.resource.contentType.matches(
+          '(application/pdf|image/.*|text/.*|model/.*|application/(msword|vnd[.].*|.*wordprocessingml.*|.*spreadsheetml.*|.*presentationml.*|zip|octet-stream|x-.*|.*(dwg|dxf|step|iges|sla).*))'
+        );
+    }
+  }
+}

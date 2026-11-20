@@ -1,0 +1,68 @@
+.app-shell:not(.dark-mode) {
+  --ink: #354052;
+  --muted: #78869a;
+  --line: #dfe5ed;
+  --teal: #738bad;
+  --navy: #25344a;
+  color: #354052;
+  background: #eef1f5;
+}
+
+.app-shell:not(.dark-mode) .sidebar,
+.app-shell:not(.dark-mode) .topbar {
+  background-color: #f7f8fb;
+  border-color: #dfe5ed;
+}
+
+.app-shell:not(.dark-mode) .panel,
+.app-shell:not(.dark-mode) .stat-card {
+  background-color: #fafbfd;
+  border-color: #dfe5ed;
+}
+
+.app-shell:not(.dark-mode) .workspace-switch,
+.app-shell:not(.dark-mode) .help-card,
+.app-shell:not(.dark-mode) .global-search,
+.app-shell:not(.dark-mode) .button-outline {
+  background-color: #f4f6fa;
+  border-color: #d8e0ea;
+}
+
+.app-shell:not(.dark-mode) .nav-item.active {
+  color: #526f99;
+  background: #e6edf7;
+}
+
+.app-shell:not(.dark-mode) .nav-item:hover,
+.app-shell:not(.dark-mode) .button-outline:hover {
+  background-color: #eaf0f7;
+}
+
+.app-shell:not(.dark-mode) .button-primary {
+  background-color: #7189ad;
+  box-shadow: 0 1px 2px #526f991c;
+}
+
+.app-shell:not(.dark-mode) .button-primary:hover {
+  background-color: #617da3;
+}
+
+.app-shell:not(.dark-mode) .brand-dot,
+.app-shell:not(.dark-mode) .text-button,
+.app-shell:not(.dark-mode) .icon-link {
+  color: #7189ad;
+}
+
+.app-shell:not(.dark-mode) .global-search input {
+  color: #354052;
+}
+
+.app-shell.dark-mode .button-primary {
+  background-color: #416eae;
+}
+
+.app-shell.dark-mode .brand-dot,
+.app-shell.dark-mode .text-button,
+.app-shell.dark-mode .icon-link {
+  color: #8db4ee;
+}
